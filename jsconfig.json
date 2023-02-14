@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext"],
+		"module": "ESNext",
+		"target": "ESNext",
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+			"@components/*": ["src/components/*"],
+			"@section/*": ["src/components/sections/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@css/*": ["src/css/*"],
+			//"@services/*": ["src/services/*"],
+			//"@hooks/*": ["src/hooks/*"],
+		},
+        "outDir": "./assets"
+	}
+}

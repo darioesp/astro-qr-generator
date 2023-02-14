@@ -1,0 +1,41 @@
+{
+	"name": "qr-generator",
+	"version": "0.0.1",
+	"description": "QR code generator",
+	"main": "jsconfig.js",
+	"static": "public",
+	"router": {
+		"dir": [
+			"src"
+		],
+		"index": [
+			".html",
+			".js"
+		]
+	},
+	"scripts": {
+		"dev": "bun astro dev",
+		"build": "bun astro build",
+		"preview": "bun astro preview",
+		"clean": "rm -rf dist out node_modules",
+		"phoenix": "rm -rf node_modules && bun install",
+		"format": "prettier -w .",
+		"lint:eslint": "eslint . --ext .js,.astro,.ts,.tsx",
+		"lint:eslint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix"
+	},
+	"devDependencies": {
+		"@astrojs/tailwind": "3.0.1",
+		"astro": "2.0.6",
+		"bun-types": "0.5.4",
+		"eslint": "8.33.0",
+		"eslint-config-prettier": "8.6.0",
+		"prettier": "2.8.3",
+		"prettier-plugin-astro": "0.8.0",
+		"standard": "17.0.0",
+		"tailwindcss": "3.2.4"
+	},
+	"dependencies": {},
+	"eslintConfig": {
+		"extends": "./node_modules/standard/eslintrc.json"
+	}
+}

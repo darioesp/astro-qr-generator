@@ -1,0 +1,12 @@
+---
+import App from '@layouts/App.astro';
+import Card from '@section/Card.astro';
+const TITLE = 'Code QR';
+const THEME_COLOR = '#D5E1EF';
+---
+
+<App title={`${TITLE}`} themeColor={`${THEME_COLOR}`}>
+    <main class="grid h-screen bg-teal-100 w-100 place-content-center">
+        <Card />
+    </main>
+</App>
