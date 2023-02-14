@@ -16,11 +16,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install bun
+        run: curl -fsSL https://bun.sh/install | bash
+
       - name: Install modules
-        run: npm i --legacy-peer-deps
+        run: bun install
 
       - name: Run build
-        run: npm run production
+        run: bun run build
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
