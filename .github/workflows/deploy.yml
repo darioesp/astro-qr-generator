@@ -3,17 +3,15 @@ on:
   push:
     branches:
       - main
-#   pull_request:
-#     branches:
-#       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-     permissions:
-       id-token: ddp_wbZYeZ3MxvfJdZHeYHtqr4HPCqg1jZ111wh8 # Needed for auth with Deno Deploy
-       contents: read # Needed to clone the repository
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,7 +20,7 @@ jobs:
         run: npm i --legacy-peer-deps
 
       - name: Run build
-        run: npm run build
+        run: npm run production
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
