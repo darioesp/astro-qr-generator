@@ -19,6 +19,9 @@ jobs:
       - name: Install bun
         run: curl -fsSL https://bun.sh/install | bash | export PATH="$HOME/.bun/bin:$PATH"
 
+      - name: Debug PATH
+        run: echo $PATH
+
       - name: Install modules
         run: bun install
 
