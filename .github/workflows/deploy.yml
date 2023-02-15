@@ -18,6 +18,7 @@ jobs:
 
       - name: Install bun
         run: curl -fsSL https://bun.sh/install | bash
+    export PATH="$HOME/.bun/bin:$PATH"
 
       - name: Install modules
         run: bun install
