@@ -16,12 +16,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install bun
-        run: |
-            curl -fsSL https://bun.sh/install | bash
+      - name: Setup Bun - Test Builds
+        uses: ./
+        with:
+          bun-version: ${{ matrix.bun-version }}
 
-    #   - name: Add Bun to PATH
-    #     run: echo 'export PATH="$HOME/.bun/bin:$PATH"' >> $GITHUB_ENV
+      - name: Try bun
+        run: |
+          bun --version
 
       - name: Bun version
         run: |
