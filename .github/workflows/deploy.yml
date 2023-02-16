@@ -11,6 +11,9 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+        id-token: write # This is required for requesting the JWT
+        contents: read  # This is required for actions/checkout
 
     steps:
       - name: Checkout
@@ -19,13 +22,6 @@ jobs:
       - uses: oven-sh/setup-bun@v0.1.8
         with:
             bun-version: latest
-
-      - name: Bun version
-        run: |
-          bun --version
-
-      - name: PATH
-        run: echo $PATH
 
       - name: Install modules
         run: bun install
