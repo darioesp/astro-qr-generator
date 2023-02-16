@@ -1,14 +1,11 @@
 ---
-const URL_IMAGE = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Desp&bgcolor=255-255-255-0"
+const URL_IMAGE = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Desp"
 const TITLE_CARD = "lorem ipsum dolor sit ame, adipisicing elit Quisquamt"
 const DESCRIPTION_CARD = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
 ---
 <section class="w-full max-w-[360px] bg-white rounded-2xl p-4 relative aspect-video shadow-gray-500/70 drop-shadow-xl">
-    <div class="grid place-content-center w-full overflow-hidden rounded-xl relative bg-blue-600 after:content-[''] after:absolute after:w-52 after:h-52 after:bg-sky-500/20 after:top-[-30%] after:opacity-50 after:rounded-full after:left-[-25%] before:content-[''] before:absolute before:w-52 before:h-52 before:bg-sky-500/20 before:bottom-[-15%] before:opacity-50 before:rounded-full before:right-[-30%] after:backdrop-blur-md before:backdrop-blur-md aspect-square after:z-[-1] before:z-[-1] z-[1]">
-        <picture>
-            <source srcset={URL_IMAGE}  media="(min-width: 768px)">
-            <img src="" alt="" srcset="" class="relative object-cover object-center aspect-square">
-        </picture>
+    <div class="grid place-content-center w-full overflow-hidden rounded-xl relative bg-blue-600 after:content-[''] after:absolute after:w-80 after:h-80 after:bg-sky-500/20 after:top-[-25%] after:opacity-40 after:rounded-full after:left-[-25%] before:content-[''] before:absolute before:w-52 before:h-52 before:bg-sky-500/20 before:bottom-[-15%] before:opacity-30 before:rounded-full before:right-[-30%] aspect-square after:z-[-1] before:z-[-1] z-[1]">
+        <img src={URL_IMAGE} alt="qr-code" class="relative object-cover object-center aspect-square">
     </div>
     <h1 class="mt-5 font-sans text-xl font-bold text-center">{TITLE_CARD}</h1>
     <p class="mt-4 text-center text-gray-600 mb-7">{DESCRIPTION_CARD}</p>
