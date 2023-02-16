@@ -32,5 +32,5 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-            project: "desp-astro-qr-generator"
+            project: "desp-qr-generator"
             entrypoint: "./dist/server/entry.mjs"
