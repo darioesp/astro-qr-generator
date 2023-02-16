@@ -16,14 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Bun - Test Builds
-        uses: ./
-        with:
-          bun-version: ${{ matrix.bun-version }}
-
-      - name: Try bun
+      - name: Install bun
         run: |
-          bun --version
+            curl -fsSL https://bun.sh/install | bash
+
+      - name: Setup Bun - Test Builds
+        uses: ~/.bun/bin/bun
 
       - name: Bun version
         run: |
