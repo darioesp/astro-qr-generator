@@ -13,6 +13,6 @@
 			//"@services/*": ["src/services/*"],
 			//"@hooks/*": ["src/hooks/*"],
 		},
-        "outDir": "./assets"
+        "outDir": "./dist",
 	}
 }
