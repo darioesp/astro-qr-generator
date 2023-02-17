@@ -33,6 +33,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
             project: "desp-qr-generator"
-            # entrypoint: https://deno.land/std@0.177.0/http/file_server.ts
-            entrypoint: dist/server/entry.mjs
-            root: ./
+            entrypoint: https://deno.land/std@0.177.0/http/file_server.ts
+            root: dist/server/entry.mjs
