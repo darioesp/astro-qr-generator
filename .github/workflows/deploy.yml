@@ -12,8 +12,8 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     permissions:
-        id-token: write # This is required for requesting the JWT
-        contents: read  # This is required for actions/checkout
+        id-token: write
+        contents: read
 
     steps:
       - name: Checkout
@@ -33,5 +33,6 @@ jobs:
         uses: denoland/deployctl@v1
         with:
             project: "desp-qr-generator"
-            entrypoint: server/entry.mjs
-            root: dist
+            # entrypoint: https://deno.land/std@0.177.0/http/file_server.ts
+            entrypoint: dist/server/entry.mjs
+            root: ./
