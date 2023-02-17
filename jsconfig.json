@@ -10,8 +10,6 @@
 			"@section/*": ["src/components/sections/*"],
 			"@layouts/*": ["src/layouts/*"],
 			"@css/*": ["src/css/*"],
-			//"@services/*": ["src/services/*"],
-			//"@hooks/*": ["src/hooks/*"],
 		},
         "outDir": "./dist",
 	}
