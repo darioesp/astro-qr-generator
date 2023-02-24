@@ -1,34 +1,38 @@
 {
-	"name": "qr-generator",
-	"version": "0.0.1",
-	"description": "QR code generator",
-	"main": "jsconfig.js",
-	"static": "public",
-	"scripts": {
-		"dev": "bun astro dev",
-		"build": "bun astro build",
-		"preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
-		"clean": "rm -rf dist out node_modules",
-		"phoenix": "rm -rf node_modules && bun install",
-		"format": "prettier -w .",
-		"lint:eslint": "eslint . --ext .js,.astro,.ts,.tsx",
-		"lint:eslint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix"
-	},
-	"devDependencies": {
-		"@astrojs/tailwind": "3.0.1",
-		"astro": "2.0.11",
-		"bun-types": "0.5.4",
-		"eslint": "8.33.0",
-		"eslint-config-prettier": "8.6.0",
-		"prettier": "2.8.3",
-		"prettier-plugin-astro": "0.8.0",
-		"standard": "17.0.0",
-		"tailwindcss": "3.2.4"
-	},
-	"dependencies": {
-		"@astrojs/deno": "4.0.0"
-	},
-	"eslintConfig": {
-		"extends": "./node_modules/standard/eslintrc.json"
-	}
+  "name": "qr-generator",
+  "version": "0.0.1",
+  "description": "QR code generator",
+  "main": "jsconfig.js",
+  "static": "public",
+  "scripts": {
+    "dev": "bun astro dev",
+    "build": "bun astro build",
+    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
+    "clean": "rm -rf dist out node_modules",
+    "phoenix": "rm -rf node_modules && bun install",
+    "format": "prettier -w .",
+    "lint:eslint": "eslint . --ext .js,.astro,.ts,.tsx",
+    "lint:eslint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix"
+  },
+  "devDependencies": {
+    "@astrojs/preact": "2.0.3",
+    "@astrojs/tailwind": "3.0.1",
+    "astro": "2.0.11",
+    "bun-types": "0.5.4",
+    "eslint": "8.33.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-astro": "0.23.0",
+    "prettier": "2.8.3",
+    "prettier-plugin-astro": "0.8.0",
+    "prettier-plugin-tailwindcss": "0.2.3",
+    "standard": "17.0.0",
+    "tailwindcss": "3.2.4"
+  },
+  "dependencies": {
+    "@astrojs/deno": "4.0.0",
+    "nightwind": "1.1.13",
+    "preact": "10.12.1",
+    "url-js": "2.1.0"
+  }
 }
