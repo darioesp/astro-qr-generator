@@ -20,8 +20,8 @@ export function InputUrl() {
 		}, TIMEOUT)
 	}
 
-    console.log(is_url)
-    console.log(valueSearch.length > 0)
+/*     console.log(is_url)
+    console.log(valueSearch.length > 0) */
 
 	return (
 		<>
