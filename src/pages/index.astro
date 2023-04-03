@@ -1,31 +1,24 @@
 ---
 import App from '@layouts/App.astro'
 import Card from '@section/Card.astro'
+import { dataGlobal } from '@utils/dataGlobal'
 import { InputUrl } from '@components/InputUrl'
 import { SwitchDarkMod } from '@components/SwitchDarkMod'
 import { NightwindInit } from '@utils/nightwind'
-const TITLE = 'Code QR'
-const THEME_COLOR = '#D5E1EF'
-const dataCards = {
-	URL_IMAGE: 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Desp',
-	TITLE_CARD: 'Meta tag title',
-	DESCRIPTION_CARD: 'Meta tag description',
-}
+const { TITLE, THEME_COLOR } = dataGlobal;
 ---
 
 <App title={`${TITLE}`} themeColor={`${THEME_COLOR}`}>
-	<div class="bg-primary-100">
-		<header class='flex items-center justify-center py-8  bg-primary-200'>
+	<div class='bg-primary-100'>
+		<header class='flex items-center justify-center py-8 bg-primary-200 fixed w-full'>
 			<dv class='flex w-full justify-around gap-4 px-4'>
-				<InputUrl client:visible />
-				<div class='flex items-center justify-center'>
-                    <SwitchDarkMod client:load/>
-				</div>
+				<InputUrl client:only />
+				<SwitchDarkMod client:only />
 			</dv>
 		</header>
 		<main class='w-100 flex h-screen items-center justify-center'>
-			<Card {dataCards} />
+			<Card { dataGlobal } />
 		</main>
 	</div>
-    <NightwindInit client:only/>
+	<NightwindInit client:only />
 </App>

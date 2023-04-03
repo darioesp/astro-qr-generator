@@ -1,15 +1,8 @@
 ---
-const { URL_IMAGE, TITLE_CARD, DESCRIPTION_CARD } = Astro.props.dataCards
+import { BodyCard } from '@components/BodyCard'
+const dataGlobal = Astro.props.dataGlobal
 ---
 
-<section
-	class='relative aspect-video w-full max-w-[360px] rounded-2xl p-4 shadow-gray-500/70 drop-shadow-xl bg-white sm:w-[360px]'
->
-	<div
-		class="relative z-[1] grid aspect-square w-full place-content-center overflow-hidden rounded-xl bg-blue-600 before:absolute before:bottom-[-20%] before:right-[-30%] before:z-[-1] before:h-52 before:w-52 before:rounded-full before:bg-sky-600/30 before:content-[''] after:absolute after:top-[-36%] after:left-[-38%] after:z-[-1] after:h-80 after:w-80 after:rounded-full after:bg-sky-600/30 after:content-['']"
-	>
-		<img src={URL_IMAGE} alt='qr-code' class='relative aspect-square object-cover object-center' />
-	</div>
-	<h1 class='mt-5 text-center font-sans text-xl font-bold text-slate-800'>{TITLE_CARD}</h1>
-	<p class='mt-4 mb-7 text-center text-slate-600'>{DESCRIPTION_CARD}</p>
+<section class='relative aspect-video w-full max-w-[360px] rounded-2xl p-4 shadow-gray-500/70 drop-shadow-xl bg-white sm:w-[360px]' >
+	<BodyCard {dataGlobal} client:only />
 </section>
