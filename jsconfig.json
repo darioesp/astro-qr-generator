@@ -14,6 +14,7 @@
 			"@section/*": ["src/components/sections/*"],
 			"@layouts/*": ["src/layouts/*"],
 			"@utils/*": ["src/utils/*"],
+			"@services/*": ["src/services/*"],
 			"@css/*": ["src/css/*"]
 		},
 		"outDir": "./dist"
