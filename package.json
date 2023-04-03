@@ -2,7 +2,7 @@
   "name": "qr-generator",
   "version": "0.0.1",
   "description": "QR code generator",
-  "main": "jsconfig.js",
+  "main": "jsconfig.json",
   "static": "public",
   "scripts": {
     "dev": "bun astro dev",
@@ -31,8 +31,10 @@
   },
   "dependencies": {
     "@astrojs/deno": "4.0.0",
+    "async-dispatcher": "^0.1.0",
     "nightwind": "1.1.13",
     "preact": "10.12.1",
+    "qr-code-styling": "^1.5.0",
     "url-js": "2.1.0"
   }
 }
