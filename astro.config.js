@@ -1,7 +1,7 @@
-import { defineConfig } from 'astro/config';
-import deno from '@astrojs/deno';
-import tailwind from '@astrojs/tailwind';
-import preact from '@astrojs/preact';
+import { defineConfig } from 'astro/config'
+import deno from '@astrojs/deno'
+import tailwind from '@astrojs/tailwind'
+import preact from '@astrojs/preact'
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,4 +15,4 @@ export default defineConfig({
 		}),
 		preact(),
 	],
-});
+})
