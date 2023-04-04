@@ -15,15 +15,15 @@ module.exports = {
 					600: '#4A5568',
 					700: '#2D3748',
 					800: '#1A202C',
-					900: '#171923',
-				},
-			},
+					900: '#171923'
+				}
+			}
 		},
 		nightwind: {
 			transitionDuration: '400ms',
 			transitionClasses: 'full',
 			colorScale: {
-				preset: 'reduced',
+				preset: 'reduced'
 			},
 			colorClasses: [
 				'gradient',
@@ -33,7 +33,7 @@ module.exports = {
 				'ring',
 				'ring-offset',
 				'divide',
-				'placeholder',
+				'placeholder'
 			],
 			colors: {
 				primary: {
@@ -46,14 +46,14 @@ module.exports = {
 					600: 'primary.300',
 					700: 'primary.200',
 					800: 'primary.100',
-					900: 'primary.50',
+					900: 'primary.50'
 				},
 				white: 'primary.700',
-				black: 'primary.200',
-			},
-		},
+				black: 'primary.200'
+			}
+		}
 	},
 	variants: {
-		nightwind: ['gradient', 'text', 'bg', 'border', 'ring', 'ring-offset', 'divide', 'placeholder'], // Add any Tailwind variant
-	},
+		nightwind: ['gradient', 'text', 'bg', 'border', 'ring', 'ring-offset', 'divide', 'placeholder'] // Add any Tailwind variant
+	}
 }

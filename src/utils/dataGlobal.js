@@ -409,5 +409,5 @@ export const dataGlobal = {
 	title: 'Meta tag title',
 	description: 'Meta tag description',
 	TITLE: 'Code QR',
-	THEME_COLOR: '#D5E1EF',
+	THEME_COLOR: '#D5E1EF'
 }

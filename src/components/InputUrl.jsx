@@ -7,25 +7,24 @@ import { dispatcherCard } from 'src/services/dispatcherCard'
 
 
 
-export function InputUrl() {
-    const { textUrl, handleSearchInput } = handleInputURL()
-	const [ isURL ] = useOnlyUrl({ url: textUrl })
-    const [ qrData ] = useCodeQR({textUrl})
+export function InputUrl () {
+	const { textUrl, handleSearchInput } = handleInputURL()
+	const [isURL] = useOnlyUrl({ url: textUrl })
+	const [qrData] = useCodeQR({ textUrl })
 
-    useEffect(() => {
-        if(textUrl.length === 0) {
-            dispatcherCard?.dispatch({ type: 'updaterCard', payload: [] })
-            return
-        }
+	useEffect(() => {
+		if (textUrl.length === 0) {
+			dispatcherCard?.dispatch({ type: 'updaterCard', payload: [] })
+			return
+		}
 
-        if(isURL && qrData) {
-            const action = { type: 'updaterCard', payload: [qrData]};
-            dispatcherCard?.dispatch(action)
-        }
-        return
-    }, [textUrl, qrData])
+		if (isURL && qrData) {
+			const action = { type: 'updaterCard', payload: [qrData] }
+			dispatcherCard?.dispatch(action)
+		}
+	}, [textUrl, qrData])
 
-    return (
+	return (
 		<>
 			<div class='grid w-full grid-flow-row auto-rows-auto grid-cols-1 grid-rows-1 justify-items-center'>
 				<input
@@ -34,11 +33,11 @@ export function InputUrl() {
 					placeholder='https://desp-qr-generator.deno.dev'
 					onInput={ handleSearchInput }
 				/>
-				{(textUrl.length > 0  && isURL === false) &&
+				{(textUrl.length > 0 && isURL === false) &&
                     (<span class='mt-3 rounded-lg p-2 text-sm text-red-200 bg-red-500 dark:text-slate-200 sm:max-w-2xl'>
 						Url not valid
-					</span>
-                )}
+                    </span>
+                    )}
 			</div>
 		</>
 	)
