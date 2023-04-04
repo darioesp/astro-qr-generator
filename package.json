@@ -11,8 +11,8 @@
     "clean": "rm -rf dist out node_modules",
     "phoenix": "rm -rf node_modules && bun install",
     "format": "prettier -w .",
-    "lint:eslint": "eslint . --ext .js,.astro,.ts,.tsx",
-    "lint:eslint:fix": "eslint . --ext .js,.astro,.ts,.tsx --fix"
+    "lint:eslint": "eslint . --ext .js,.astro,.ts,.tsx,.jsx",
+    "lint:eslint:fix": "eslint . --ext .js,.astro,.ts,.tsx,.jsx --fix"
   },
   "devDependencies": {
     "@astrojs/preact": "2.0.3",
