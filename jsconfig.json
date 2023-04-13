@@ -3,20 +3,21 @@
 		"lib": ["ESNext"],
 		"module": "ESNext",
 		"target": "ESNext",
+        "resolveJsonModule": true,
 		"moduleResolution": "node",
-		"types": ["astro/client", "preact"],
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
+		"types": ["astro/client", "preact"],
+        "outDir": "./dist",
 		"baseUrl": ".",
 		"paths": {
-			"@hooks/*": ["src/hoooks/*"],
+            "@hooks/*": ["src/hoooks/*"],
 			"@components/*": ["src/components/*"],
 			"@section/*": ["src/components/sections/*"],
 			"@layouts/*": ["src/layouts/*"],
 			"@utils/*": ["src/utils/*"],
 			"@services/*": ["src/services/*"],
 			"@css/*": ["src/css/*"]
-		},
-		"outDir": "./dist"
+		}
 	}
 }
