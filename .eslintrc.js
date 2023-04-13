@@ -2,7 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2022: true,
-		node: true
+		node: true,
 	},
 	extends: ['eslint:recommended', 'eslint-config-prettier', 'standard', 'plugin:astro/recommended'],
 	overrides: [
@@ -10,40 +10,26 @@ module.exports = {
 			files: ['*.astro'],
 			parser: 'astro-eslint-parser',
 			parserOptions: {
-				extraFileExtensions: ['.astro']
+				extraFileExtensions: ['.astro'],
 			},
 			rules: {
-				'astro/no-set-html-directive': 'error'
-			}
-		}
+				'astro/no-set-html-directive': 'error',
+			},
+		},
 	],
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
-		project: './jsconfig.json'
-	},
-	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
-		ecmaFeatures: {
-			jsx: true
-		}
+		project: './jsconfig.json',
+		'@typescript-eslint/no-unused-vars': 'off',
 	},
 	rules: {
 		indent: ['warn', 'tab'],
+		tabWidth: 4,
 		'no-unused-vars': 'warn',
-		'@typescript-eslint/no-unused-vars': [
-			'warn',
-			{
-				argsIgnorePattern: '^_',
-				varsIgnorePattern: '^_',
-				caughtErrorsIgnorePattern: '^_'
-			}
-		],
 		'no-multiple-empty-lines': 'off',
 		'no-tabs': 'off',
-		quotes: ['warn', 'single'],
 		'jsx-quotes': ['warn', 'prefer-single'],
-		'eol-last': 'off'
-	}
+		'comma-dangle': ['never'],
+	},
 }
