@@ -5,8 +5,8 @@
   "main": "jsconfig.json",
   "static": "public",
   "scripts": {
-    "dev": "bun astro dev",
-    "build": "bun astro build",
+    "dev": "astro dev",
+    "build": "astro build",
     "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "clean": "rm -rf dist out node_modules",
     "phoenix": "rm -rf node_modules && bun install",
