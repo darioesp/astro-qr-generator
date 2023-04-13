@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'preact/hooks'
 import QRCodeStyling from 'qr-code-styling'
 
-export function useCodeQR ({ textUrl }) {
+export function useCodeQR({ textUrl }) {
 	const [qrData, setQr] = useState(null)
 	const COLOR = '#000000ff'
 	const COLOR_RADIAL = '#8688B2'
@@ -16,9 +16,9 @@ export function useCodeQR ({ textUrl }) {
 					height: 200,
 					data: textUrl,
 					image: favicon,
-					margin: 1,
+					margin: 2,
 					backgroundOptions: {
-						color: 'currentColor'
+						color: 'currentColor',
 					},
 					dotsOptions: {
 						color: COLOR_RADIAL,
@@ -28,18 +28,18 @@ export function useCodeQR ({ textUrl }) {
 							rotation: 0,
 							colorStops: [
 								{ offset: 0, color: COLOR_RADIAL },
-								{ offset: 1, color: COLOR_RADIAL2 }
-							]
-						}
+								{ offset: 1, color: COLOR_RADIAL2 },
+							],
+						},
 					},
 					imageOptions: {
 						crossOrigin: 'anonymous',
-						margin: 0
+						margin: 1,
 					},
 					cornersSquareOptions: {
 						type: 'extra-rounded',
-						color: COLOR_RADIAL
-					}
+						color: COLOR_RADIAL,
+					},
 				}
 				const qrCode = await new QRCodeStyling(options)
 				setQr(qrCode)
