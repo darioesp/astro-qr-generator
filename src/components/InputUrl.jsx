@@ -4,10 +4,7 @@ import { handleInputURL } from 'src/hooks/handleInputURL'
 import { useCodeQR } from 'src/hooks/useGenerateCodeQR'
 import { dispatcherCard } from 'src/services/dispatcherCard'
 
-
-
-
-export function InputUrl () {
+export function InputUrl() {
 	const { textUrl, handleSearchInput } = handleInputURL()
 	const [isURL] = useOnlyUrl({ url: textUrl })
 	const [qrData] = useCodeQR({ textUrl })
@@ -31,13 +28,15 @@ export function InputUrl () {
 					class='h-10 w-full rounded-lg border-2 py-4 px-5 text-sm bg-white border-gray-300 text-primary-800 hover:border-slate-500 focus:outline-none focus:border-slate-500 sm:max-w-2xl'
 					value={textUrl}
 					placeholder='https://desp-qr-generator.deno.dev'
-					onInput={ handleSearchInput }
+					role='input-url'
+					aria-label='input-url'
+					onInput={handleSearchInput}
 				/>
-				{(textUrl.length > 0 && isURL === false) &&
-                    (<span class='mt-3 rounded-lg p-2 text-sm text-red-200 bg-red-500 dark:text-slate-200 sm:max-w-2xl'>
+				{textUrl.length > 0 && isURL === false && (
+					<span class='mt-3 rounded-lg p-2 text-sm text-red-200 bg-red-500 dark:text-slate-200 sm:max-w-2xl'>
 						Url not valid
-                    </span>
-                    )}
+					</span>
+				)}
 			</div>
 		</>
 	)
