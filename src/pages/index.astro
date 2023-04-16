@@ -5,19 +5,19 @@ import { dataGlobal } from '@utils/dataGlobal'
 import { InputUrl } from '@components/InputUrl'
 import { SwitchDarkMod } from '@components/SwitchDarkMod'
 import { NightwindInit } from '@utils/nightwind'
-const { TITLE, THEME_COLOR } = dataGlobal;
+const { TITLE, THEME_COLOR } = dataGlobal
 ---
 
 <App title={`${TITLE}`} themeColor={`${THEME_COLOR}`}>
 	<div class='bg-primary-100'>
-		<header class='flex items-center justify-center py-8 bg-primary-200 fixed w-full'>
+		<header class='fixed flex w-full items-center justify-center py-8 bg-primary-200'>
 			<dv class='flex w-full justify-around gap-4 px-4'>
 				<InputUrl client:only />
 				<SwitchDarkMod client:only />
 			</dv>
 		</header>
 		<main class='w-100 flex h-screen items-center justify-center'>
-			<Card { dataGlobal } />
+			<Card {dataGlobal} />
 		</main>
 	</div>
 	<NightwindInit client:only />

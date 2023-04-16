@@ -8,7 +8,7 @@ export function BodyCard(props) {
 	const canvasRef = useRef(null)
 
 	useEffect(() => {
-		let currentCanvas = canvasRef?.current
+		const currentCanvas = canvasRef?.current
 		if (currentCanvas) currentCanvas.innerHTML = ''
 		if (qrCode) {
 			qrCode.append(canvasRef.current)

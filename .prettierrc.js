@@ -4,15 +4,16 @@ module.exports = {
 	semi: false,
 	singleQuote: true,
 	jsxSingleQuote: true,
-	trialingComma: 'none',
+	trailingComma: 'none',
 	tabWidth: 2,
+	multilineTernary: 'always-multiline',
 	overrides: [
 		{
 			files: ['*.json', '*.md', '*.toml', '*.yml'],
 			options: {
-				useTabs: false,
-			},
-		},
+				useTabs: false
+			}
+		}
 	],
-	endOfLine: 'lf',
+	endOfLine: 'lf'
 }

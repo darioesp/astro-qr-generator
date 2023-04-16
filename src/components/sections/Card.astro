@@ -3,6 +3,8 @@ import { BodyCard } from '@components/BodyCard'
 const dataGlobal = Astro.props.dataGlobal
 ---
 
-<section class='relative aspect-video w-full max-w-[360px] rounded-2xl p-4 shadow-gray-500/70 drop-shadow-xl bg-white sm:w-[360px]' >
+<section
+	class='relative aspect-video w-full max-w-[360px] rounded-2xl p-4 shadow-gray-500/70 drop-shadow-xl bg-white sm:w-[360px]'
+>
 	<BodyCard {dataGlobal} client:only />
 </section>

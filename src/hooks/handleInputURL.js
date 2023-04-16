@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks'
 
-export function handleInputURL () {
+export function handleInputURL() {
 	const [textUrl, setTextURL] = useState('')
 	const TIMEOUT = 500
 	let CONVERT_URL = null
