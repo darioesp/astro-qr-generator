@@ -8,7 +8,7 @@ export function useCodeQR({ textUrl }) {
 	const COLOR_RADIAL2 = '#77779C'
 	useEffect(() => {
 		const generateQR = async ({ textUrl }) => {
-			const favicon = 'http://localhost:3000/favicon.svg'
+			const favicon = 'favicon.svg'
 			try {
 				const options = {
 					type: 'svg',
